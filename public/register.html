@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProLancer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/register.css">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container-nav">
+            <h1>ProLancer</h1>
+            <nav class="nav">
+                <a href="#">Contato</a>
+                <a href="/register">Cadastro</a>
+                <a href="/login">Login</a>
+            </nav>
+        </div>
+        <div class="form-register">
+            <form onsubmit="return false;" class="form" id="form">
+                <h1>Cadastro</h1>
+                <div class="linha-form">
+                    <label for="nome">Nome:</label>
+                    <input type="text" class="input-form" id="nome" autocomplete="off" required>
+                </div>
+                <div class="linha-form">
+                    <label for="email">Email:</label>
+                    <input type="email" class="input-form" id="email" autocomplete="off" required>
+                </div>
+                <div class="linha-form">
+                    <label for="senha">Senha:</label>
+                    <input type="password" class="input-form" id="password" autocomplete="off" required>
+                </div>
+                <button type="submit" class="btn-form">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+    <script src="js/register.js"></script>
+</body>
+
+</html>
