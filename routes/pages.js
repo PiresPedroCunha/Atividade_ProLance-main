@@ -1,6 +1,7 @@
 const express = require('express')
 const loggedIn = require('../controllers/loggedIn')
 const logout = require('../controllers/logout')
+const { default: axios } = require('axios')
 
 
 const router = express.Router()
@@ -31,11 +32,20 @@ router.get('/publicaProjetos', loggedIn, (req, res) => {
 
 })
 
-router.get('/descricaoVaga/:id', loggedIn, (req, res) => {
+async function buscaEmprego(id) {
+   const response = await axios.get(`http://localhost:3001/api/job/${id}`)
+    console.log(response.data)
+}
+router.get('/descricaoVaga&:id', loggedIn, (req, res) => {
     if (!req.user) res.sendFile('login.html', { root: './public/' })
+    // buscaEmprego(req.params.id)
+
+    buscaEmprego(req.params.id)
     res.sendFile('descricaoDaVaga.html', { root: './public/' })
-//console.log(req.params.id)
 
 })
+
+
+
 
 module.exports = router;

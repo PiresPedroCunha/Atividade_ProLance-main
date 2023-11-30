@@ -34,7 +34,9 @@ function buscaEmprego() {
                         titulocard.innerText = titulo
                         descricaocard.innerText = descricao
                         card.addEventListener("click", ()=>{
-                            fetch(`/descricaoVaga/${key}`).then(res => res.redirected && ( location.href = res.url))
+                            // fetch(`/descricaoVaga/${key}`).then(res => res.redirected && ( location.href = res.url))
+                            var url = `/descricaoVaga&${key}`
+                            window.open(url, '_blank')
                         })
 
                     }

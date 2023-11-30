@@ -1,7 +1,13 @@
-const cards = document.querySelectorAll(".card")
+function buscaEmprego() {
+    // fetch("/api/job", {
+    //     method: "GET",
+    //     body:{id}
+    // }).then(res => res.json())
+    //     .then(data => {
 
-cards.forEach(card =>{
-    card.addEventListener("click", ()=>{
-        console.log("click")
-    })
-})
+    //         console.log(data)
+    //     })
+    
+}
+
+buscaEmprego()

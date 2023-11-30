@@ -13,4 +13,9 @@ module.exports = class JobController {
         const getAllJobs = await db.manager.getRepository(JobEntity)
         return await getAllJobs.find()
     }
+
+    async getJob(idJob) {
+        const getJob = await db.manager.getRepository(JobEntity).find({ where: { id: idJob } })
+        return getJob;
+    }
 }
